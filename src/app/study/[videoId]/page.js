@@ -145,12 +145,10 @@ export default function StudyRoom() {
   return (
     <main className="min-h-screen bg-[#050505] text-slate-300 p-6 md:p-10 font-sans selection:bg-indigo-500/30 print:bg-white print:text-black print:p-0 relative overflow-hidden">
       
-      {/* Background Glow */}
       <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none print:hidden"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        
-        {/* FIXED: Links back to /library now */}
+
         <Link href="/library" className="inline-flex items-center text-sm font-medium text-slate-400 hover:text-white mb-8 transition-colors print:hidden">
           <span className="mr-2">←</span> Back to Library
         </Link>
@@ -162,7 +160,7 @@ export default function StudyRoom() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 print:block">
           
-          {/* Left Column (Video & Buttons) */}
+
           <div className="flex flex-col gap-5 print:hidden">
             <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.8)] border border-white/10 bg-black">
               <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${videoId}`} frameBorder="0" allowFullScreen></iframe>
@@ -178,7 +176,6 @@ export default function StudyRoom() {
             </div>
           </div>
 
-          {/* Right Column (Notes Container) */}
           <div className="bg-white/[0.02] backdrop-blur-md rounded-3xl border border-white/5 shadow-2xl p-8 h-[600px] overflow-y-auto relative custom-scrollbar print:h-auto print:shadow-none print:border-none print:p-0 print:overflow-visible print:bg-transparent">
             {!quizQuestions && !isQuizLoading ? (
               <div className="markdown-content-wrapper">

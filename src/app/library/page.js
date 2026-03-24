@@ -23,7 +23,7 @@ export default function Library() {
   return (
     <main className="min-h-screen bg-[#050505] text-slate-300 p-6 md:p-12 font-sans selection:bg-indigo-500/30 relative overflow-hidden">
       
-      {/* Background Glows */}
+
       <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none"></div>
 
@@ -58,7 +58,6 @@ export default function Library() {
               <Link href={`/study/${note.videoId}`} key={note.videoId} className="group flex">
                 <div className="bg-white/[0.03] rounded-3xl border border-white/5 hover:border-white/20 hover:bg-white/[0.06] shadow-2xl transition-all duration-300 w-full flex flex-col overflow-hidden backdrop-blur-md">
                   
-                  {/* Thumbnail Section */}
                   <div className="relative aspect-video w-full overflow-hidden bg-white/5">
                     <img 
                       src={`https://img.youtube.com/vi/${note.videoId}/maxresdefault.jpg`}
@@ -75,7 +74,6 @@ export default function Library() {
                     </div>
                   </div>
                   
-                  {/* Info Section */}
                   <div className="p-6 flex flex-col flex-grow">
                     <h2 className="font-bold text-white text-lg leading-snug line-clamp-2 mb-3 group-hover:text-indigo-400 transition-colors tracking-tight">
                       {note.videoTitle ? note.videoTitle.replace(' - YouTube', '') : "Untitled Video"}
@@ -86,7 +84,7 @@ export default function Library() {
                         </p>
                     </div>
                     
-                    {/* Card Footer */}
+
                     <div className="mt-6 pt-5 border-t border-white/5 flex items-center justify-between">
                         <span className="text-[10px] font-bold uppercase tracking-widest text-slate-600">
                             {new Date(note.updatedAt || Date.now()).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}
